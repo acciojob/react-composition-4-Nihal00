@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 
 const Form = () => {
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   function update() {
     console.log(user);
@@ -18,19 +16,19 @@ const Form = () => {
         <input
           type="text"
           id="name"
-          onChange={(e) => setUser(...user, user.name = e.target.value)}
+          onChange={(e) => setName(e.target.value)}
         />
         <label htmlFor="email">Email</label>
         <input
           type="email"
           id="email"
-          onChange={(e) => setUser(...user, user.email = e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label htmlFor="password">Password</label>
         <input
           type="password"
           id="password"
-          onChange={(e) => setUser(...user, user.password = e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Submit</button>
       </form>

@@ -6,7 +6,7 @@ const Form = () => {
   const [password, setPassword] = useState("");
 
   function update() {
-    console.log(user);
+    console.log({name, email, password});
   }
 
   return (
